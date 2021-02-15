@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import ReviewsApiService from './services/reviews-api-service'
 import TokenService from './services/token-service';
 import Header from './components/Header/Header';
 import LandingPage from './routes/LandingPage/LandagePage';
@@ -14,7 +15,7 @@ function App() {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
     if (TokenService.hasAuthToken()) {
-      RoutinesApiService.getAllRoutines()
+      ReviewsApiService.getAllReviews()
         .then(res => {
           setReviews(res);
         })
