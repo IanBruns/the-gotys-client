@@ -1,5 +1,7 @@
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -9,7 +11,11 @@ function App() {
       </header>
 
       <main>
-        Main
+        <Switch>
+          <Route
+            component={NotFoundPage}
+          />
+        </Switch>
       </main>
 
       <footer>
