@@ -53,6 +53,7 @@ function App() {
           <PrivateRoute
             path={'/home'}
             component={HomePage}
+            reviews={reviews}
           />
           <Route
             component={NotFoundPage}
