@@ -5,6 +5,8 @@ import TokenService from './services/token-service';
 import Header from './components/Header/Header';
 import LandingPage from './routes/LandingPage/LandagePage';
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
+import PublicOnlyRoute from './utils/PublicOnlyRoute';
+import LoginPage from './routes/LoginPage/LoginPage';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,6 +40,11 @@ function App() {
           <Route
             exact path={'/'}
             component={LandingPage}
+          />
+          <PublicOnlyRoute
+            path={'/login'}
+            component={LoginPage}
+            whenLoggedIn={whenLoggedIn}
           />
           <Route
             component={NotFoundPage}
