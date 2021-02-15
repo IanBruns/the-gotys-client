@@ -7,3 +7,7 @@ a:visited { text-decoration: none;
 }
 a:hover   { color: red }
 a:active  { color: red  }
+
+h1, footer {
+    text-align: center;
+}

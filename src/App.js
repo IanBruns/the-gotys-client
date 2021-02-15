@@ -13,7 +13,9 @@ function App() {
       </main>
 
       <footer>
-        Footer
+        <p>
+          Made by Ian Bruns
+        </p>
       </footer>
     </div>
   );
