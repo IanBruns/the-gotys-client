@@ -1,0 +1,12 @@
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.Header__not-logged-in, .Header__logged-in {
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin-right: 10px;
+   margin-top: 10px;
+}
