@@ -7,7 +7,9 @@ import Header from './components/Header/Header';
 import LandingPage from './routes/LandingPage/LandagePage';
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
 import PublicOnlyRoute from './utils/PublicOnlyRoute';
+import PrivateRoute from './utils/PrivateRoute'
 import LoginPage from './routes/LoginPage/LoginPage';
+import HomePage from './routes/HomePage/HomePage';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -47,6 +49,10 @@ function App() {
             path={'/login'}
             component={LoginPage}
             whenLoggedIn={whenLoggedIn}
+          />
+          <PrivateRoute
+            path={'/home'}
+            component={HomePage}
           />
           <Route
             component={NotFoundPage}
