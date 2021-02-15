@@ -11,15 +11,15 @@ import LoginPage from './routes/LoginPage/LoginPage';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // const [reviews, setReviews] = useState([]);
-  // useEffect(() => {
-  //   if (TokenService.hasAuthToken()) {
-  //     RoutinesApiService.getAllRoutines()
-  //       .then(res => {
-  //         setReviews(res);
-  //       })
-  //   }
-  // }, [isLoggedIn]);
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    if (TokenService.hasAuthToken()) {
+      RoutinesApiService.getAllRoutines()
+        .then(res => {
+          setReviews(res);
+        })
+    }
+  }, [isLoggedIn]);
 
   function whenLoggedIn() {
     setIsLoggedIn(true);
@@ -32,7 +32,8 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Header />
+        <Header
+          whenLoggedOut={whenLoggedOut} />
       </header>
 
       <main>
