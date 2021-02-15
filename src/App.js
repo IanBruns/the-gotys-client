@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import LandingPage from './routes/LandingPage/LandagePage';
 import NotFoundPage from './routes/NotFoundPage/NotFoundPage';
 
 function App() {
@@ -12,6 +13,10 @@ function App() {
 
       <main>
         <Switch>
+          <Route
+            exact path={'/'}
+            component={LandingPage}
+          />
           <Route
             component={NotFoundPage}
           />
